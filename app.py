@@ -4,8 +4,8 @@ import pandas as pd
 
 st.write("✅ App loaded successfully!")
 
-st.title("💘 Relationship Predictor")
-st.write("Enter a message and we'll guess if it's LoVers or FriendZone!")
+st.title("💘 Heart Hack")
+st.write(- "Type your line—LoVe or FriendZone, the algorithm never lies.")
 
 # Try loading model and vectorizer
 try:
