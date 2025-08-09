@@ -18,11 +18,15 @@ except Exception as e:
 # Input text
 user_input = st.text_input("Your message:")
 
-if user_input:
-    try:
-        features = emoji_vectorizer.transform([user_input])
-        prediction = model.predict(features)[0]
-        label = "💘 LoVers" if prediction == 1 else "🤝 FriendZone"
-        st.success(f"Prediction: {label}")
-    except Exception as e:
-        st.error(f"❌ Prediction failed: {e}")
+# Predict button
+if st.button("Predict"):
+    if user_input:
+        try:
+            features = emoji_vectorizer.transform([user_input])
+            prediction = model.predict(features)[0]
+            label = "💘 LoVers" if prediction == 1 else "🤝 FriendZone"
+            st.success(f"Prediction: {label}")
+        except Exception as e:
+            st.error(f"❌ Prediction failed: {e}")
+    else:
+        st.warning("Please enter a message first.")
