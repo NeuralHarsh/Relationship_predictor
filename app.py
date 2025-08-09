@@ -5,7 +5,7 @@ import pandas as pd
 st.write("✅ App loaded successfully!")
 
 st.title("💘 Heart Hack")
-st.write(- "Type your line—LoVe or FriendZone, the algorithm never lies.")
+st.write("Type your line—LoVe or FriendZone, the algorithm never lies.")
 
 # Try loading model and vectorizer
 try:
